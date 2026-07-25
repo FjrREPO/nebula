@@ -1,0 +1,26 @@
+{
+  "name": "nebula",
+  "private": true,
+  "description": "Agentic RWA infrastructure on Casper — oracle agents with verifiable on-chain identity and reputation, feeding a compliance-aware yield vault over x402 micropayments.",
+  "license": "MIT",
+  "author": "FjrREPO",
+  "packageManager": "bun@1.2.7",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --build",
+    "contracts:build": "cd contracts && cargo odra build",
+    "contracts:test": "cd contracts && cargo test",
+    "deploy:testnet": "bun run scripts/deploy.ts"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@types/bun": "^1.2.7",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  }
+}

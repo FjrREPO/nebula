@@ -1,0 +1,34 @@
+# Environment & secrets — never commit keys
+.env
+.env.*
+!.env.example
+*.pem
+keys/
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+out/
+.next/
+coverage/
+*.tsbuildinfo
+
+# Rust / contracts
+target/
+contracts/wasm/
+contracts-session/wasm/
+resources/casper_contract_schemas/
+
+# Runtime data
+data/*.json
+!data/.gitkeep
+
+# OS / editor noise
+.DS_Store
+*.log
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
