@@ -1,0 +1,297 @@
+[
+  {
+    "at": "2026-07-25T21:51:26.759Z",
+    "actor": "admin",
+    "kind": "fund",
+    "summary": "Funded portfolioAgent with 60 CSPR gas",
+    "transactionHash": "da2c13bc8f88b98a0cab0e20bd8186f472d9e6cf6a78776cdcc35e7f2b6d0154",
+    "explorerUrl": "https://testnet.cspr.live/transaction/da2c13bc8f88b98a0cab0e20bd8186f472d9e6cf6a78776cdcc35e7f2b6d0154"
+  },
+  {
+    "at": "2026-07-25T21:51:33.186Z",
+    "actor": "admin",
+    "kind": "fund",
+    "summary": "Funded originator with 60 CSPR gas",
+    "transactionHash": "1484c2788369d331e1600963022541b7376a90a1324a396e8685a7cab7253734",
+    "explorerUrl": "https://testnet.cspr.live/transaction/1484c2788369d331e1600963022541b7376a90a1324a396e8685a7cab7253734"
+  },
+  {
+    "at": "2026-07-25T21:51:39.354Z",
+    "actor": "admin",
+    "kind": "fund",
+    "summary": "Funded investor with 60 CSPR gas",
+    "transactionHash": "3b44ca0d7a2affb56fa38cfb56da7f1a1391a5453b2367e832aa6e66b1b7c90d",
+    "explorerUrl": "https://testnet.cspr.live/transaction/3b44ca0d7a2affb56fa38cfb56da7f1a1391a5453b2367e832aa6e66b1b7c90d"
+  },
+  {
+    "at": "2026-07-25T21:51:50.432Z",
+    "actor": "admin",
+    "kind": "identity",
+    "summary": "KYC-verified the investor (country 360)",
+    "transactionHash": "ec1400f3af8964265b763092dd51796d94227b0fe4ba936dc2cd80e9ccf37a6c",
+    "explorerUrl": "https://testnet.cspr.live/transaction/ec1400f3af8964265b763092dd51796d94227b0fe4ba936dc2cd80e9ccf37a6c"
+  },
+  {
+    "at": "2026-07-25T21:51:56.211Z",
+    "actor": "admin",
+    "kind": "identity",
+    "summary": "Verified the oracle agent identity",
+    "transactionHash": "98213995ddfdb8ebe194b90df43413ee451f1af06224619b4fabc884f614e985",
+    "explorerUrl": "https://testnet.cspr.live/transaction/98213995ddfdb8ebe194b90df43413ee451f1af06224619b4fabc884f614e985"
+  },
+  {
+    "at": "2026-07-25T21:52:07.161Z",
+    "actor": "admin",
+    "kind": "seed",
+    "summary": "Sent 5000 nUSD to the investor",
+    "transactionHash": "0a5003c5df93c2a86b06acec837bad2aa8d160ac90ab317862c69c8013de96bd",
+    "explorerUrl": "https://testnet.cspr.live/transaction/0a5003c5df93c2a86b06acec837bad2aa8d160ac90ab317862c69c8013de96bd"
+  },
+  {
+    "at": "2026-07-25T21:52:12.841Z",
+    "actor": "admin",
+    "kind": "seed",
+    "summary": "Sent 5000 nUSD to the originator",
+    "transactionHash": "0d2eb684b2ab844916dc6cfbf486b1f6ca76f69bd89a19a795a11d1c29abb39b",
+    "explorerUrl": "https://testnet.cspr.live/transaction/0d2eb684b2ab844916dc6cfbf486b1f6ca76f69bd89a19a795a11d1c29abb39b"
+  },
+  {
+    "at": "2026-07-25T21:52:23.900Z",
+    "actor": "admin",
+    "kind": "seed",
+    "summary": "Sent 100 nUSD to the portfolio agent (x402 budget)",
+    "transactionHash": "cb73564c49a4d0b049983b45c6ea13958668bd030f0fa52ffb1491a86dcbfd12",
+    "explorerUrl": "https://testnet.cspr.live/transaction/cb73564c49a4d0b049983b45c6ea13958668bd030f0fa52ffb1491a86dcbfd12"
+  },
+  {
+    "at": "2026-07-25T21:52:29.928Z",
+    "actor": "investor",
+    "kind": "approve",
+    "summary": "Approved the vault to pull 2,000 nUSD",
+    "transactionHash": "bf745dea88607fec279753f186f27fd364d022426bec1404a51b67b2a2a904d4",
+    "explorerUrl": "https://testnet.cspr.live/transaction/bf745dea88607fec279753f186f27fd364d022426bec1404a51b67b2a2a904d4"
+  },
+  {
+    "at": "2026-07-25T21:52:35.524Z",
+    "actor": "investor",
+    "kind": "deposit",
+    "summary": "Deposited 2,000 nUSD → vault shares minted",
+    "transactionHash": "1def9e1a49ae6cd67b80b2061ffc56dd162253185f2ebb676558b2c6d6eda35b",
+    "explorerUrl": "https://testnet.cspr.live/transaction/1def9e1a49ae6cd67b80b2061ffc56dd162253185f2ebb676558b2c6d6eda35b"
+  },
+  {
+    "at": "2026-07-25T21:52:46.581Z",
+    "actor": "oracle-agent",
+    "kind": "register",
+    "summary": "Registered oracle identity on the hub",
+    "transactionHash": "807adcad453ca9bee2f6ac145d697a2947facda51a776889ed943d78e1f4ef42",
+    "explorerUrl": "https://testnet.cspr.live/transaction/807adcad453ca9bee2f6ac145d697a2947facda51a776889ed943d78e1f4ef42"
+  },
+  {
+    "at": "2026-07-25T21:53:01.994Z",
+    "actor": "oracle-agent",
+    "kind": "attest",
+    "summary": "Attested INV-2026-0007 at risk 15 (finance)",
+    "transactionHash": "9184897f71271f4c4907972f733e2818a2b4d7e688e308a11096ee3adb60a95a",
+    "explorerUrl": "https://testnet.cspr.live/transaction/9184897f71271f4c4907972f733e2818a2b4d7e688e308a11096ee3adb60a95a",
+    "data": {
+      "assetId": "INV-2026-0007",
+      "riskScore": 15,
+      "dataHash": "blake2b:291eb0782e0b6cac383d783b8b88f0748ff392ea8c1c134c39878f71ae3fb5dc",
+      "model": "gpt-4o-mini"
+    }
+  },
+  {
+    "at": "2026-07-25T21:53:16.419Z",
+    "actor": "oracle-agent",
+    "kind": "attest",
+    "summary": "Attested INV-2026-0012 at risk 45 (finance)",
+    "transactionHash": "0c55f8a37ddd0b6f264f18d16eb1849502ccedf6098e0b90b633df2ba16267dd",
+    "explorerUrl": "https://testnet.cspr.live/transaction/0c55f8a37ddd0b6f264f18d16eb1849502ccedf6098e0b90b633df2ba16267dd",
+    "data": {
+      "assetId": "INV-2026-0012",
+      "riskScore": 45,
+      "dataHash": "blake2b:6682fbe7871b4b76cffa3776a03af5429c921ef05c1e4e10b2ba15a5d52dcfa4",
+      "model": "gpt-4o-mini"
+    }
+  },
+  {
+    "at": "2026-07-25T21:53:25.544Z",
+    "actor": "oracle-agent",
+    "kind": "attest",
+    "summary": "Attested INV-2026-0019 at risk 80 (decline)",
+    "transactionHash": "f051c668708f38097c08c435fbcb57fc623891a008d4aa07bd72b4499ec06200",
+    "explorerUrl": "https://testnet.cspr.live/transaction/f051c668708f38097c08c435fbcb57fc623891a008d4aa07bd72b4499ec06200",
+    "data": {
+      "assetId": "INV-2026-0019",
+      "riskScore": 80,
+      "dataHash": "blake2b:b72410fb8f3929768bf75dafd52bc2a72b53cae42f601250ffb9315917e705c9",
+      "model": "gpt-4o-mini"
+    }
+  },
+  {
+    "at": "2026-07-25T21:53:32.455Z",
+    "actor": "oracle-agent",
+    "kind": "x402-sale",
+    "summary": "Sold /reports/INV-2026-0007 for 0.5 nUSD via x402",
+    "transactionHash": "daa1974740b58aa83f765b92a9f3bd07a7c201049dcd4e73955a8e7c593f23a1",
+    "explorerUrl": "https://testnet.cspr.live/transaction/daa1974740b58aa83f765b92a9f3bd07a7c201049dcd4e73955a8e7c593f23a1",
+    "data": {
+      "resourcePath": "/reports/INV-2026-0007",
+      "payer": "0039a6845812941f88f64c79c2366fefd040f177ea2065cbe00789de7756c1285a"
+    }
+  },
+  {
+    "at": "2026-07-25T21:53:32.456Z",
+    "actor": "portfolio-agent",
+    "kind": "x402-purchase",
+    "summary": "Bought risk report INV-2026-0007 from the oracle via x402",
+    "transactionHash": "daa1974740b58aa83f765b92a9f3bd07a7c201049dcd4e73955a8e7c593f23a1",
+    "data": {
+      "assetId": "INV-2026-0007",
+      "riskScore": 15
+    }
+  },
+  {
+    "at": "2026-07-25T21:53:44.047Z",
+    "actor": "oracle-agent",
+    "kind": "x402-sale",
+    "summary": "Sold /reports/INV-2026-0012 for 0.5 nUSD via x402",
+    "transactionHash": "31d6ae90e8c89c65f3316b3b3d7445efb29c988db6be63493268d42f604cf21e",
+    "explorerUrl": "https://testnet.cspr.live/transaction/31d6ae90e8c89c65f3316b3b3d7445efb29c988db6be63493268d42f604cf21e",
+    "data": {
+      "resourcePath": "/reports/INV-2026-0012",
+      "payer": "0039a6845812941f88f64c79c2366fefd040f177ea2065cbe00789de7756c1285a"
+    }
+  },
+  {
+    "at": "2026-07-25T21:53:44.047Z",
+    "actor": "portfolio-agent",
+    "kind": "x402-purchase",
+    "summary": "Bought risk report INV-2026-0012 from the oracle via x402",
+    "transactionHash": "31d6ae90e8c89c65f3316b3b3d7445efb29c988db6be63493268d42f604cf21e",
+    "data": {
+      "assetId": "INV-2026-0012",
+      "riskScore": 45
+    }
+  },
+  {
+    "at": "2026-07-25T21:53:50.247Z",
+    "actor": "oracle-agent",
+    "kind": "x402-sale",
+    "summary": "Sold /reports/INV-2026-0019 for 0.5 nUSD via x402",
+    "transactionHash": "9e963a53d256afee706eecdc29c77b22108146b186ee4e085e5e057b1810bd91",
+    "explorerUrl": "https://testnet.cspr.live/transaction/9e963a53d256afee706eecdc29c77b22108146b186ee4e085e5e057b1810bd91",
+    "data": {
+      "resourcePath": "/reports/INV-2026-0019",
+      "payer": "0039a6845812941f88f64c79c2366fefd040f177ea2065cbe00789de7756c1285a"
+    }
+  },
+  {
+    "at": "2026-07-25T21:53:50.247Z",
+    "actor": "portfolio-agent",
+    "kind": "x402-purchase",
+    "summary": "Bought risk report INV-2026-0019 from the oracle via x402",
+    "transactionHash": "9e963a53d256afee706eecdc29c77b22108146b186ee4e085e5e057b1810bd91",
+    "data": {
+      "assetId": "INV-2026-0019",
+      "riskScore": 80
+    }
+  },
+  {
+    "at": "2026-07-25T21:54:04.250Z",
+    "actor": "portfolio-agent",
+    "kind": "allocate",
+    "summary": "Allocated 947.368421052 nUSD to INV-2026-0007",
+    "transactionHash": "49e15b4ea0ba108ed426a6edd9a7fe5c9188fba76fc8b8e31f9ccadfde015321",
+    "explorerUrl": "https://testnet.cspr.live/transaction/49e15b4ea0ba108ed426a6edd9a7fe5c9188fba76fc8b8e31f9ccadfde015321",
+    "data": {
+      "assetId": "INV-2026-0007",
+      "amountAtomic": "947368421052",
+      "reasoning": "The strong credit rating and payment history of Unilever Indonesia make this a low-risk investment."
+    }
+  },
+  {
+    "at": "2026-07-25T21:54:15.380Z",
+    "actor": "portfolio-agent",
+    "kind": "allocate",
+    "summary": "Allocated 852.631578947 nUSD to INV-2026-0012",
+    "transactionHash": "279b15fee0467e30a1011bcf3d04ee31b114a496e841f245ac1672b28c9e60f6",
+    "explorerUrl": "https://testnet.cspr.live/transaction/279b15fee0467e30a1011bcf3d04ee31b114a496e841f245ac1672b28c9e60f6",
+    "data": {
+      "assetId": "INV-2026-0012",
+      "amountAtomic": "852631578947",
+      "reasoning": "Despite a moderate risk score, the solid credit rating and reasonable advance rate justify a significant allocation."
+    }
+  },
+  {
+    "at": "2026-07-25T21:54:21.034Z",
+    "actor": "originator",
+    "kind": "approve",
+    "summary": "Approved repayment of 994.736842104 nUSD",
+    "transactionHash": "294f2046add4dee503395b6235d2854737b0d645cc6e62be979bc4987e9dcb52",
+    "explorerUrl": "https://testnet.cspr.live/transaction/294f2046add4dee503395b6235d2854737b0d645cc6e62be979bc4987e9dcb52"
+  },
+  {
+    "at": "2026-07-25T21:54:32.277Z",
+    "actor": "originator",
+    "kind": "settle",
+    "summary": "Settled INV-2026-0007: repaid 994.736842104 nUSD (+5%)",
+    "transactionHash": "749c5512bdf39cfb654b38727e079815daf4b6c77190a22900fa26bae764043e",
+    "explorerUrl": "https://testnet.cspr.live/transaction/749c5512bdf39cfb654b38727e079815daf4b6c77190a22900fa26bae764043e",
+    "data": {
+      "allocationId": "1"
+    }
+  },
+  {
+    "at": "2026-07-25T21:54:38.149Z",
+    "actor": "originator",
+    "kind": "approve",
+    "summary": "Approved repayment of 895.263157894 nUSD",
+    "transactionHash": "1f9f4264e60a9167a670470a30954106cf5df121d818f0380c2385939e400524",
+    "explorerUrl": "https://testnet.cspr.live/transaction/1f9f4264e60a9167a670470a30954106cf5df121d818f0380c2385939e400524"
+  },
+  {
+    "at": "2026-07-25T21:54:43.750Z",
+    "actor": "originator",
+    "kind": "settle",
+    "summary": "Settled INV-2026-0012: repaid 895.263157894 nUSD (+5%)",
+    "transactionHash": "3cf0a1c8a0f05598be21ff37d093b6a13fa7d22db658a5370261c577c6f8f51c",
+    "explorerUrl": "https://testnet.cspr.live/transaction/3cf0a1c8a0f05598be21ff37d093b6a13fa7d22db658a5370261c577c6f8f51c",
+    "data": {
+      "allocationId": "2"
+    }
+  },
+  {
+    "at": "2026-07-25T21:54:55.041Z",
+    "actor": "investor",
+    "kind": "withdraw",
+    "summary": "Withdrew 1,000 shares at the appreciated price",
+    "transactionHash": "ca7cd2bfdfc718086aa0f51fd3eeca94bb62f302eaa206cf871b4541d43cd1de",
+    "explorerUrl": "https://testnet.cspr.live/transaction/ca7cd2bfdfc718086aa0f51fd3eeca94bb62f302eaa206cf871b4541d43cd1de"
+  },
+  {
+    "at": "2026-07-25T21:55:00.945Z",
+    "actor": "admin",
+    "kind": "resolve",
+    "summary": "Resolved attestation for INV-2026-0007 as accurate",
+    "transactionHash": "e2272ca7dbad56bbe3eec6af606dcdcea68daea2935e7df9bcb8060a98904819",
+    "explorerUrl": "https://testnet.cspr.live/transaction/e2272ca7dbad56bbe3eec6af606dcdcea68daea2935e7df9bcb8060a98904819"
+  },
+  {
+    "at": "2026-07-25T21:55:11.877Z",
+    "actor": "admin",
+    "kind": "resolve",
+    "summary": "Resolved attestation for INV-2026-0012 as accurate",
+    "transactionHash": "c561a028a564eced89aea305f1d92b58fb215d42549750dd05ac1489eb6e8c58",
+    "explorerUrl": "https://testnet.cspr.live/transaction/c561a028a564eced89aea305f1d92b58fb215d42549750dd05ac1489eb6e8c58"
+  },
+  {
+    "at": "2026-07-25T21:55:17.642Z",
+    "actor": "admin",
+    "kind": "resolve",
+    "summary": "Resolved attestation for INV-2026-0019 as accurate",
+    "transactionHash": "942469bddab505a9490205d3eca6559d66caca2d38f4b97ddee704560791611d",
+    "explorerUrl": "https://testnet.cspr.live/transaction/942469bddab505a9490205d3eca6559d66caca2d38f4b97ddee704560791611d"
+  }
+]
