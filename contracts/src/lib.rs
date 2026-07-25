@@ -11,3 +11,7 @@ pub use nusd::NebulaUsd;
 pub mod identity;
 
 pub use identity::IdentityRegistry;
+
+pub mod oracle;
+
+pub use oracle::OracleHub;
