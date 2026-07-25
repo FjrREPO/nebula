@@ -1,0 +1,22 @@
+{
+  "name": "@nebula/plugin-oracle",
+  "version": "0.1.0",
+  "private": true,
+  "description": "RWA underwriting for oracle agents: the origination book, LLM-driven risk assessment with a deterministic fallback model, and integrity-hashed risk reports.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@nebula/core": "workspace:*",
+    "@noble/hashes": "^1.7.1"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.7",
+    "typescript": "^5.8.2"
+  }
+}

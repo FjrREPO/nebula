@@ -13,6 +13,14 @@
         "typescript": "^5.8.2",
       },
     },
+    "packages/core": {
+      "name": "@nebula/core",
+      "version": "0.1.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.7",
+        "typescript": "^5.8.2",
+      },
+    },
     "packages/plugin-onchain": {
       "name": "@nebula/plugin-onchain",
       "version": "0.1.0",
@@ -20,6 +28,18 @@
         "@scure/bip32": "^1.6.2",
         "@scure/bip39": "^1.5.4",
         "casper-js-sdk": "5.0.12",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.7",
+        "typescript": "^5.8.2",
+      },
+    },
+    "packages/plugin-oracle": {
+      "name": "@nebula/plugin-oracle",
+      "version": "0.1.0",
+      "dependencies": {
+        "@nebula/core": "workspace:*",
+        "@noble/hashes": "^1.7.1",
       },
       "devDependencies": {
         "@types/bun": "^1.2.7",
@@ -77,7 +97,11 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
+    "@nebula/core": ["@nebula/core@workspace:packages/core"],
+
     "@nebula/plugin-onchain": ["@nebula/plugin-onchain@workspace:packages/plugin-onchain"],
+
+    "@nebula/plugin-oracle": ["@nebula/plugin-oracle@workspace:packages/plugin-oracle"],
 
     "@nebula/plugin-x402": ["@nebula/plugin-x402@workspace:packages/plugin-x402"],
 
