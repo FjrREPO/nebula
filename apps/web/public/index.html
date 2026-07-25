@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nebula — Agentic RWA on Casper</title>
+    <style>
+      :root {
+        --surface: #fcfcfb;
+        --surface-2: #f0efec;
+        --ink: #1f1f1e;
+        --ink-2: #5a5955;
+        --ink-3: #8a8983;
+        --line: #e3e2de;
+        --accent: #2a78d6;
+        --accent-ink: #185aa8;
+        --good: #008300;
+        --warn: #c98500;
+        --bad: #e34948;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --surface: #1a1a19;
+          --surface-2: #242423;
+          --ink: #f2f1ee;
+          --ink-2: #b5b4ae;
+          --ink-3: #82817b;
+          --line: #34343241;
+          --accent: #3987e5;
+          --accent-ink: #6ea8ef;
+          --good: #35a135;
+          --warn: #eda100;
+          --bad: #e66767;
+        }
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        font:
+          15px/1.5 ui-sans-serif,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          sans-serif;
+        background: var(--surface);
+        color: var(--ink);
+        padding: 32px 20px 64px;
+      }
+      main {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+      header {
+        margin-bottom: 28px;
+      }
+      h1 {
+        font-size: 26px;
+        letter-spacing: -0.02em;
+      }
+      h1 small {
+        color: var(--ink-3);
+        font-weight: 500;
+        font-size: 15px;
+        margin-left: 10px;
+      }
+      .sub {
+        color: var(--ink-2);
+        margin-top: 4px;
+      }
+      h2 {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--ink-3);
+        margin: 34px 0 12px;
+      }
+      .tiles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 12px;
+      }
+      .tile {
+        background: var(--surface-2);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 14px 16px;
+      }
+      .tile .v {
+        font-size: 24px;
+        font-weight: 650;
+        letter-spacing: -0.02em;
+        font-variant-numeric: tabular-nums;
+      }
+      .tile .l {
+        color: var(--ink-2);
+        font-size: 13px;
+        margin-top: 2px;
+      }
+      .tile .d {
+        color: var(--ink-3);
+        font-size: 12px;
+        margin-top: 4px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-variant-numeric: tabular-nums;
+      }
+      th {
+        text-align: left;
+        color: var(--ink-3);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+        padding: 8px 10px;
+        border-bottom: 1px solid var(--line);
+      }
+      td {
+        padding: 9px 10px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      .num {
+        text-align: right;
+      }
+      .meter {
+        display: inline-block;
+        width: 90px;
+        height: 6px;
+        border-radius: 3px;
+        background: var(--line);
+        vertical-align: 3px;
+        margin-right: 8px;
+        overflow: hidden;
+      }
+      .meter i {
+        display: block;
+        height: 100%;
+        background: var(--accent);
+        border-radius: 3px;
+      }
+      .chip {
+        display: inline-block;
+        padding: 1px 9px;
+        border-radius: 99px;
+        font-size: 12px;
+        font-weight: 600;
+        background: var(--surface-2);
+        border: 1px solid var(--line);
+        color: var(--ink-2);
+      }
+      .chip.oracle {
+        color: var(--accent-ink);
+        border-color: var(--accent-ink);
+      }
+      .chip.portfolio {
+        color: #b25415;
+        border-color: #b25415;
+      }
+      @media (prefers-color-scheme: dark) {
+        .chip.portfolio {
+          color: #f09a67;
+          border-color: #f09a67;
+        }
+      }
+      .feed {
+        list-style: none;
+        padding: 0;
+      }
+      .feed li {
+        display: flex;
+        gap: 12px;
+        padding: 10px 4px;
+        border-bottom: 1px solid var(--line);
+        align-items: baseline;
+      }
+      .feed time {
+        color: var(--ink-3);
+        font-size: 12px;
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+      }
+      .feed .s {
+        flex: 1;
+      }
+      a {
+        color: var(--accent-ink);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .tx {
+        font-size: 12px;
+        white-space: nowrap;
+      }
+      .addr {
+        font-family: ui-monospace, Menlo, monospace;
+        font-size: 12px;
+        color: var(--ink-2);
+        word-break: break-all;
+      }
+      .empty {
+        color: var(--ink-3);
+        padding: 24px 0;
+      }
+      .ok {
+        color: var(--good);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Nebula <small>Agentic RWA infrastructure · Casper Testnet</small></h1>
+        <div class="sub">
+          Deposit once, hold one token — oracle agents attest real-world risk on-chain, a portfolio
+          agent pays them via x402 and allocates through the vault's on-chain risk gate.
+        </div>
+      </header>
+
+      <h2>Vault</h2>
+      <div class="tiles" id="tiles"><div class="empty">Waiting for a demo run…</div></div>
+
+      <h2>Allocations</h2>
+      <div id="allocations"><div class="empty">No allocations yet.</div></div>
+
+      <h2>On-chain activity</h2>
+      <ul class="feed" id="feed">
+        <li class="empty">No activity recorded yet — run <code>bun run scripts/demo.ts</code>.</li>
+      </ul>
+
+      <h2>Deployed contracts (casper-test)</h2>
+      <div id="contracts" class="empty">Loading…</div>
+    </main>
+
+    <script>
+      const fmt = (atomic) =>
+        (Number(atomic) / 1e9).toLocaleString('en-US', { maximumFractionDigits: 2 });
+
+      async function json(path) {
+        const response = await fetch(path);
+        return response.ok ? response.json() : null;
+      }
+
+      function tile(value, label, detail) {
+        return `<div class="tile"><div class="v">${value}</div><div class="l">${label}</div>${detail ? `<div class="d">${detail}</div>` : ''}</div>`;
+      }
+
+      function chipFor(actor) {
+        if (actor.includes('oracle')) return '<span class="chip oracle">oracle agent</span>';
+        if (actor.includes('portfolio'))
+          return '<span class="chip portfolio">portfolio agent</span>';
+        return `<span class="chip">${actor}</span>`;
+      }
+
+      (async () => {
+        const [run, summary, deployments] = await Promise.all([
+          json('/api/run'),
+          json('/api/summary'),
+          json('/api/deployments'),
+        ]);
+
+        if (summary && !summary.missing) {
+          const allocated = summary.allocations.reduce((sum, a) => sum + Number(a.amountAtomic), 0);
+          const yieldEarned = Number(summary.totalRepaid) - allocated;
+          document.getElementById('tiles').innerHTML = [
+            tile(fmt(summary.deposit) + ' nUSD', 'Deposited', 'compliance-gated (ERC-3643 style)'),
+            tile(
+              fmt(String(allocated)) + ' nUSD',
+              'Allocated to RWA',
+              summary.allocations.length + ' invoice assets',
+            ),
+            tile(
+              '<span class="ok">+' + fmt(String(yieldEarned)) + ' nUSD</span>',
+              'Yield realized',
+              '5% settlement premium',
+            ),
+            tile(summary.reportsSold, 'Reports sold via x402', 'agent paid agent in nUSD'),
+          ].join('');
+        }
+
+        if (summary?.allocations?.length) {
+          const attestByAsset = {};
+          for (const event of run ?? []) {
+            if (event.kind === 'attest') attestByAsset[event.data?.assetId] = event;
+          }
+          document.getElementById('allocations').innerHTML = `<table>
+      <thead><tr><th>Asset</th><th>Oracle risk score</th><th class="num">Allocated (nUSD)</th><th>Agent reasoning</th><th>Tx</th></tr></thead>
+      <tbody>${summary.allocations
+        .map((allocation) => {
+          const attest = attestByAsset[allocation.assetId];
+          const risk = attest?.data?.riskScore ?? '—';
+          const allocateEvent = (run ?? []).find(
+            (event) => event.kind === 'allocate' && event.data?.assetId === allocation.assetId,
+          );
+          return `<tr>
+          <td><b>${allocation.assetId}</b></td>
+          <td><span class="meter"><i style="width:${risk}%"></i></span>${risk} / 100</td>
+          <td class="num">${fmt(allocation.amountAtomic)}</td>
+          <td>${allocation.reasoning}</td>
+          <td class="tx">${allocateEvent?.explorerUrl ? `<a href="${allocateEvent.explorerUrl}" target="_blank">explorer ↗</a>` : ''}</td>
+        </tr>`;
+        })
+        .join('')}</tbody></table>`;
+        }
+
+        if (Array.isArray(run) && run.length) {
+          document.getElementById('feed').innerHTML = run
+            .slice()
+            .reverse()
+            .map(
+              (event) => `<li>
+      <time>${new Date(event.at).toLocaleTimeString()}</time>
+      ${chipFor(event.actor)}
+      <span class="s">${event.summary}</span>
+      ${event.explorerUrl ? `<a class="tx" href="${event.explorerUrl}" target="_blank">tx ↗</a>` : ''}
+    </li>`,
+            )
+            .join('');
+        }
+
+        if (deployments && !deployments.missing) {
+          document.getElementById('contracts').classList.remove('empty');
+          document.getElementById('contracts').innerHTML = `<table>
+      <thead><tr><th>Contract</th><th>Package hash</th></tr></thead>
+      <tbody>${Object.entries(deployments.packages)
+        .map(
+          ([name, hash]) =>
+            `<tr><td>${name.replace('nebula_', '')}</td><td class="addr">${hash}</td></tr>`,
+        )
+        .join('')}
+      </tbody></table>`;
+        }
+      })();
+    </script>
+  </body>
+</html>
