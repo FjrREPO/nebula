@@ -7,3 +7,7 @@ extern crate alloc;
 pub mod nusd;
 
 pub use nusd::NebulaUsd;
+
+pub mod identity;
+
+pub use identity::IdentityRegistry;
