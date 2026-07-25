@@ -15,3 +15,7 @@ pub use identity::IdentityRegistry;
 pub mod oracle;
 
 pub use oracle::OracleHub;
+
+pub mod compliance;
+
+pub use compliance::ComplianceEngine;
