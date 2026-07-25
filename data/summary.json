@@ -1,0 +1,26 @@
+{
+  "network": "casper-test",
+  "completedAt": "2026-07-25T21:55:17.642Z",
+  "packages": {
+    "nusd": "88850405e67d8b375b3307cdf2afa86b215a9625780803a77125b050bec942aa",
+    "identity": "6a4b72b925b0e86a9fd3adc5bda1b7b9f0fa1e0d697c644bad4020809dc0db8d",
+    "oracleHub": "888b54eb6ab775124b8eb58284dca0dbf62e8f702cebd7141768b03b36c421ff",
+    "compliance": "e79a7e260ebf4cabe7ca66d950fb8d5bbc54c2dcbde715754edcb67c94632390",
+    "vault": "d0e61415ade59455d098e1c4c6f9bafe8dd6b29f98821649bd4f9ab70a05c8cb"
+  },
+  "deposit": "2000000000000",
+  "allocations": [
+    {
+      "assetId": "INV-2026-0007",
+      "amountAtomic": "947368421052",
+      "reasoning": "The strong credit rating and payment history of Unilever Indonesia make this a low-risk investment."
+    },
+    {
+      "assetId": "INV-2026-0012",
+      "amountAtomic": "852631578947",
+      "reasoning": "Despite a moderate risk score, the solid credit rating and reasonable advance rate justify a significant allocation."
+    }
+  ],
+  "totalRepaid": "1889999999998",
+  "reportsSold": 3
+}
