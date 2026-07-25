@@ -34,3 +34,6 @@ data/*.json
 !.vscode/extensions.json
 
 wallet.txt
+
+# MVP-lowered wasm produced at deploy time
+deployments/*.wasm
