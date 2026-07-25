@@ -18,6 +18,7 @@ export {
   createRpcClient,
   explorerTxUrl,
   getBalanceMotes,
+  nativeTransfer,
   waitForExecution,
   type ExecutionResult,
 } from './client';

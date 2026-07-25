@@ -1,4 +1,11 @@
-import { HttpHandler, PublicKey, PurseIdentifier, RpcClient } from 'casper-js-sdk';
+import {
+  HttpHandler,
+  NativeTransferBuilder,
+  PrivateKey,
+  PublicKey,
+  PurseIdentifier,
+  RpcClient,
+} from 'casper-js-sdk';
 
 import type { ChainConfig } from './config';
 
@@ -54,6 +61,27 @@ export async function getBalanceMotes(rpc: RpcClient, publicKeyHex: string): Pro
   const publicKey = PublicKey.fromHex(publicKeyHex);
   const balance = await rpc.queryLatestBalance(PurseIdentifier.fromPublicKey(publicKey));
   return BigInt(balance.balance.toString());
+}
+
+/** Native CSPR transfer (protocol minimum 2.5 CSPR). */
+export async function nativeTransfer(
+  rpc: RpcClient,
+  chainName: string,
+  from: PrivateKey,
+  toPublicKeyHex: string,
+  motes: bigint,
+): Promise<ExecutionResult> {
+  const transaction = new NativeTransferBuilder()
+    .from(from.publicKey)
+    .target(PublicKey.fromHex(toPublicKeyHex))
+    .amount(motes.toString())
+    .id(Date.now())
+    .chainName(chainName)
+    .payment(100_000_000)
+    .build();
+  transaction.sign(from);
+  await rpc.putTransaction(transaction);
+  return waitForExecution(rpc, transaction.hash.toHex());
 }
 
 /** Explorer URL for a transaction on the configured network. */

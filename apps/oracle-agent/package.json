@@ -1,0 +1,22 @@
+{
+  "name": "@nebula/oracle-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nebula's oracle agent: underwrites the RWA origination book with an LLM, anchors risk attestations on-chain with its registered identity, and sells the full reports behind an x402 paywall.",
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@nebula/core": "workspace:*",
+    "@nebula/plugin-onchain": "workspace:*",
+    "@nebula/plugin-oracle": "workspace:*",
+    "@nebula/plugin-x402": "workspace:*",
+    "casper-js-sdk": "5.0.12"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.7",
+    "typescript": "^5.8.2"
+  }
+}

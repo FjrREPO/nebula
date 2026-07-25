@@ -1,0 +1,22 @@
+{
+  "name": "@nebula/portfolio-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nebula's portfolio agent (vault manager): buys oracle risk reports over x402 — agent paying agent — reasons over them with an LLM, and executes vault allocations that the chain independently re-verifies.",
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@nebula/core": "workspace:*",
+    "@nebula/plugin-onchain": "workspace:*",
+    "@nebula/plugin-oracle": "workspace:*",
+    "@nebula/plugin-x402": "workspace:*",
+    "casper-js-sdk": "5.0.12"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.7",
+    "typescript": "^5.8.2"
+  }
+}

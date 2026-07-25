@@ -13,6 +13,36 @@
         "typescript": "^5.8.2",
       },
     },
+    "apps/oracle-agent": {
+      "name": "@nebula/oracle-agent",
+      "version": "0.1.0",
+      "dependencies": {
+        "@nebula/core": "workspace:*",
+        "@nebula/plugin-onchain": "workspace:*",
+        "@nebula/plugin-oracle": "workspace:*",
+        "@nebula/plugin-x402": "workspace:*",
+        "casper-js-sdk": "5.0.12",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.7",
+        "typescript": "^5.8.2",
+      },
+    },
+    "apps/portfolio-agent": {
+      "name": "@nebula/portfolio-agent",
+      "version": "0.1.0",
+      "dependencies": {
+        "@nebula/core": "workspace:*",
+        "@nebula/plugin-onchain": "workspace:*",
+        "@nebula/plugin-oracle": "workspace:*",
+        "@nebula/plugin-x402": "workspace:*",
+        "casper-js-sdk": "5.0.12",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.7",
+        "typescript": "^5.8.2",
+      },
+    },
     "packages/core": {
       "name": "@nebula/core",
       "version": "0.1.0",
@@ -99,11 +129,15 @@
 
     "@nebula/core": ["@nebula/core@workspace:packages/core"],
 
+    "@nebula/oracle-agent": ["@nebula/oracle-agent@workspace:apps/oracle-agent"],
+
     "@nebula/plugin-onchain": ["@nebula/plugin-onchain@workspace:packages/plugin-onchain"],
 
     "@nebula/plugin-oracle": ["@nebula/plugin-oracle@workspace:packages/plugin-oracle"],
 
     "@nebula/plugin-x402": ["@nebula/plugin-x402@workspace:packages/plugin-x402"],
+
+    "@nebula/portfolio-agent": ["@nebula/portfolio-agent@workspace:apps/portfolio-agent"],
 
     "@noble/curves": ["@noble/curves@1.9.7", "", { "dependencies": { "@noble/hashes": "1.8.0" } }, "sha512-gbKGcRUYIjA3/zCCNaWDciTMFI0dCkvou3TL8Zmy5Nc7sJ47a0jtOeZoTaMxkuqRo9cRhjOdZJXegxYE5FN/xw=="],
 
