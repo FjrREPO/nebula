@@ -43,6 +43,14 @@
         "typescript": "^5.8.2",
       },
     },
+    "apps/web": {
+      "name": "@nebula/web",
+      "version": "0.1.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.7",
+        "typescript": "^5.8.2",
+      },
+    },
     "packages/core": {
       "name": "@nebula/core",
       "version": "0.1.0",
@@ -138,6 +146,8 @@
     "@nebula/plugin-x402": ["@nebula/plugin-x402@workspace:packages/plugin-x402"],
 
     "@nebula/portfolio-agent": ["@nebula/portfolio-agent@workspace:apps/portfolio-agent"],
+
+    "@nebula/web": ["@nebula/web@workspace:apps/web"],
 
     "@noble/curves": ["@noble/curves@1.9.7", "", { "dependencies": { "@noble/hashes": "1.8.0" } }, "sha512-gbKGcRUYIjA3/zCCNaWDciTMFI0dCkvou3TL8Zmy5Nc7sJ47a0jtOeZoTaMxkuqRo9cRhjOdZJXegxYE5FN/xw=="],
 
