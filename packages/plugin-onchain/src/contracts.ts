@@ -61,8 +61,8 @@ export class NebulaProtocol {
       .payment(Number(request.paymentMotes ?? GAS_CALL))
       .build();
     transaction.sign(request.signer);
-    const result = await this.rpc.putTransaction(transaction);
-    return waitForExecution(this.rpc, result.transactionHash.toString());
+    await this.rpc.putTransaction(transaction);
+    return waitForExecution(this.rpc, transaction.hash.toHex());
   }
 
   // --- nUSD -----------------------------------------------------------

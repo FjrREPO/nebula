@@ -77,8 +77,8 @@ export async function installContract(options: InstallOptions): Promise<string> 
     .build();
   transaction.sign(options.signer);
 
-  const result = await options.rpc.putTransaction(transaction);
-  const hash = result.transactionHash.toString();
+  await options.rpc.putTransaction(transaction);
+  const hash = transaction.hash.toHex();
   await waitForExecution(options.rpc, hash);
   return hash;
 }

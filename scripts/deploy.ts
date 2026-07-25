@@ -123,7 +123,11 @@ async function main() {
     console.log(`  ${explorerTxUrl(config.chainName, txHash)}`);
   }
 
-  const hashes = await readPackageHashes(rpc, deployerHex, PREFIX);
+  const allHashes = await readPackageHashes(rpc, deployerHex, PREFIX);
+  const ourKeys = new Set(PLAN.map((plan) => plan.keyName));
+  const hashes = Object.fromEntries(
+    Object.entries(allHashes).filter(([name]) => ourKeys.has(name)),
+  );
   const record = {
     network: config.chainName,
     deployer: deployerHex,
