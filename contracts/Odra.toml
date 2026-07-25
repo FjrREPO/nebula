@@ -1,0 +1,14 @@
+[[contracts]]
+fqn = "nebula_contracts::NebulaUsd"
+
+[[contracts]]
+fqn = "nebula_contracts::IdentityRegistry"
+
+[[contracts]]
+fqn = "nebula_contracts::OracleHub"
+
+[[contracts]]
+fqn = "nebula_contracts::ComplianceEngine"
+
+[[contracts]]
+fqn = "nebula_contracts::NebulaVault"
