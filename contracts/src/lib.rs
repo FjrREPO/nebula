@@ -3,3 +3,7 @@
 //! Nebula on-chain contracts for Casper (Odra / Rust → Wasm).
 
 extern crate alloc;
+
+pub mod nusd;
+
+pub use nusd::NebulaUsd;
