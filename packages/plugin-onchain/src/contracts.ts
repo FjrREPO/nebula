@@ -1,5 +1,6 @@
 import {
   Args,
+  CLTypeUInt8,
   CLValue,
   ContractCallBuilder,
   Key,
@@ -102,6 +103,46 @@ export class NebulaProtocol {
       args: Args.fromMap({
         recipient: accountKey(recipientPublicKeyHex),
         amount: CLValue.newCLUInt256(amount.toString()),
+      }),
+    });
+  }
+
+  /**
+   * EIP-3009 settlement: submit a payer's off-chain-signed authorization.
+   * The caller acts as facilitator and pays the gas; funds move payer → payee.
+   */
+  transferWithAuthorization(
+    facilitator: PrivateKey,
+    authorization: {
+      fromAccountHash: string;
+      toAccountHash: string;
+      amount: bigint;
+      validAfter: bigint;
+      validBefore: bigint;
+      nonce: Uint8Array;
+      payerPublicKeyHex: string;
+      signature: Uint8Array;
+    },
+  ): Promise<ExecutionResult> {
+    const byteList = (bytes: Uint8Array) =>
+      CLValue.newCLList(
+        CLTypeUInt8,
+        Array.from(bytes, (byte) => CLValue.newCLUint8(byte)),
+      );
+    return this.call({
+      packageHash: this.hashes.nusd,
+      entryPoint: 'transfer_with_authorization',
+      signer: facilitator,
+      paymentMotes: GAS_VAULT,
+      args: Args.fromMap({
+        from: CLValue.newCLKey(Key.newKey(`account-hash-${authorization.fromAccountHash}`)),
+        to: CLValue.newCLKey(Key.newKey(`account-hash-${authorization.toAccountHash}`)),
+        amount: CLValue.newCLUInt256(authorization.amount.toString()),
+        valid_after: CLValue.newCLUint64(authorization.validAfter.toString()),
+        valid_before: CLValue.newCLUint64(authorization.validBefore.toString()),
+        nonce: byteList(authorization.nonce),
+        public_key: CLValue.newCLPublicKey(PublicKey.fromHex(authorization.payerPublicKeyHex)),
+        signature: byteList(authorization.signature),
       }),
     });
   }

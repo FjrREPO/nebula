@@ -1,0 +1,23 @@
+{
+  "name": "@nebula/plugin-x402",
+  "version": "0.1.0",
+  "private": true,
+  "description": "x402 micropayments over nUSD (EIP-3009): EIP-712 digest + signing, payment payloads, the hosted CSPR.cloud facilitator client with self-settle fallback, and an HTTP 402 paywall server.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@nebula/plugin-onchain": "workspace:*",
+    "@noble/hashes": "^1.7.1",
+    "casper-js-sdk": "5.0.12"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.7",
+    "typescript": "^5.8.2"
+  }
+}

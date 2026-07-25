@@ -26,6 +26,19 @@
         "typescript": "^5.8.2",
       },
     },
+    "packages/plugin-x402": {
+      "name": "@nebula/plugin-x402",
+      "version": "0.1.0",
+      "dependencies": {
+        "@nebula/plugin-onchain": "workspace:*",
+        "@noble/hashes": "^1.7.1",
+        "casper-js-sdk": "5.0.12",
+      },
+      "devDependencies": {
+        "@types/bun": "^1.2.7",
+        "typescript": "^5.8.2",
+      },
+    },
   },
   "packages": {
     "@babel/code-frame": ["@babel/code-frame@7.29.7", "", { "dependencies": { "@babel/helper-validator-identifier": "^7.29.7", "js-tokens": "^4.0.0", "picocolors": "^1.1.1" } }, "sha512-Aup7aUOfpbAUg2ROOJN6Iw5f9DMBlzu0mIkm/malLQFN/YQgO48wCj0Kxa3sEHJvPVFg7siR+qRInwXd2qhQKw=="],
@@ -65,6 +78,8 @@
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
     "@nebula/plugin-onchain": ["@nebula/plugin-onchain@workspace:packages/plugin-onchain"],
+
+    "@nebula/plugin-x402": ["@nebula/plugin-x402@workspace:packages/plugin-x402"],
 
     "@noble/curves": ["@noble/curves@1.9.7", "", { "dependencies": { "@noble/hashes": "1.8.0" } }, "sha512-gbKGcRUYIjA3/zCCNaWDciTMFI0dCkvou3TL8Zmy5Nc7sJ47a0jtOeZoTaMxkuqRo9cRhjOdZJXegxYE5FN/xw=="],
 
