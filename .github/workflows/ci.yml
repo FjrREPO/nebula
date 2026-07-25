@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  typescript:
+    name: TypeScript (format, types, tests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.7
+      - run: bun install --frozen-lockfile
+      - run: bunx prettier --check .
+      - name: Typecheck workspaces
+        run: |
+          for dir in packages/core packages/plugin-onchain packages/plugin-x402 packages/plugin-oracle apps/oracle-agent apps/portfolio-agent apps/web; do
+            (cd "$dir" && bunx tsc --noEmit)
+          done
+      - run: bun test
+
+  contracts:
+    name: Contracts (fmt, clippy, tests)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: contracts
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: nightly-2026-01-01
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: contracts
+      - run: cargo fmt --check
+      - run: cargo clippy --all-targets -- -D warnings
+      - run: cargo test
