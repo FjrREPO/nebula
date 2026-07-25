@@ -1,0 +1,18 @@
+{
+  "network": "casper-test",
+  "deployer": "0203dc4a23af775ed29fc045565256c35b3519cc9bad1b7e7051172ce2cffc61cc45",
+  "updatedAt": "2026-07-25T21:47:23.752Z",
+  "packages": {
+    "nebula_compliance": "hash-e79a7e260ebf4cabe7ca66d950fb8d5bbc54c2dcbde715754edcb67c94632390",
+    "nebula_identity": "hash-6a4b72b925b0e86a9fd3adc5bda1b7b9f0fa1e0d697c644bad4020809dc0db8d",
+    "nebula_nusd": "hash-88850405e67d8b375b3307cdf2afa86b215a9625780803a77125b050bec942aa",
+    "nebula_oracle_hub": "hash-888b54eb6ab775124b8eb58284dca0dbf62e8f702cebd7141768b03b36c421ff",
+    "nebula_vault": "hash-d0e61415ade59455d098e1c4c6f9bafe8dd6b29f98821649bd4f9ab70a05c8cb"
+  },
+  "installTransactions": {
+    "IdentityRegistry": "94482ed3386ffd33f6a84bdc497764879ae0ba52458d396bdc7e1bace74e67ca",
+    "OracleHub": "f19957c5df51b1abaca358cfcff6b547d47aa4f4677a12a19d49e42f98029c9d",
+    "ComplianceEngine": "472def4a8b24b913c49fa045bb4c77263969c0249b5684c8a3f666acd1619c44",
+    "NebulaVault": "34a3b6a00bef1216853febe723ef6ffef7caf173f9de610dc1e937084183635a"
+  }
+}
